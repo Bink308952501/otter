@@ -2,13 +2,13 @@
     <div class="iteye-blog-content-contain">
 <h1><strong>环境准备</strong></h1>
 <p>1.  otter manager依赖于mysql进行配置信息的存储，所以需要预先安装mysql，并初始化otter manager的系统表结构</p>
-<p>     a.  安装mysql，这里不展开，网上一搜一大把</p>
-<p>     b.  初始化otter manager系统表： </p>
-<pre name="code" class="java">下载：wget https://raw.github.com/alibaba/otter/master/manager/biz/src/main/resources/sql/otter-manager-schema.sql
-载入：登录mysql命令行，利用source指令加载sql script.  例如：source otter-manager-schema.sql</pre>
+<p>&nbsp;&nbsp;&nbsp;     a.  安装mysql，这里不展开，网上一搜一大把</p>
+<p>&nbsp;&nbsp;&nbsp;     b.  初始化otter manager系统表： </p>
+下载：<pre name="code" class="java">wget https://raw.github.com/alibaba/otter/master/manager/biz/src/main/resources/sql/otter-manager-schema.sql</pre>
+载入：<pre name="code" class="java">source otter-manager-schema.sql</pre>
 <p style="font-size: 14px;"> </p>
 <p style="font-size: 14px;">2.  整个otter架构依赖了zookeeper进行多节点调度，所以需要预先安装zookeeper，不需要初始化节点，otter程序启动后会自检. </p>
-<p style="font-size: 14px;">     a.  安装zookeeper，这里不展开，网上一搜一大把</p>
+<p style="font-size: 14px;">&nbsp;&nbsp;&nbsp;     a.  安装zookeeper，这里不展开，网上一搜一大把</p>
 <p style="font-size: 14px;"> </p>
 <h1><strong>启动步骤</strong></h1>
 <p style="font-size: 14px;"><strong>    </strong>1.  下载otter manager</p>
