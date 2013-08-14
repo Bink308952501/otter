@@ -1,4 +1,5 @@
-<h3>Table of Contents</h3>
+*Table of Contents*
+
 * [[Home]]
 * [[Introduction]]
 * [[QuickStart]]
