@@ -3,7 +3,7 @@
 * [[Home]]
 * [[Introduction]]
 * [[QuickStart]]<br/>
-* <p>[[Manager_QuickStart]]</p>
-* <p>[[Node_QuickStart]]</p>
+* &nbsp;&nbsp;&nbsp;[[Manager_QuickStart]]
+* &nbsp;&nbsp;&nbsp;[[Node_QuickStart]]
 * [[AdminGuide]]
 * [[DevGuide]]
