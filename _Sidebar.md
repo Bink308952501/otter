@@ -2,7 +2,7 @@
 
 * [[Home]]
 * [[Introduction]]
-* [[QuickStart]]
+* QuickStart
 ** [[Manager_QuickStart]]
 ** [[Node_QuickStart]]
 * [[AdminGuide]]
