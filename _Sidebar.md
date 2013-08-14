@@ -2,10 +2,8 @@
 
 * [[Home]]
 * [[Introduction]]
-* [[QuickStart]]
-** "Index APIs":https://github.com/Netflix/exhibitor/wiki/REST-Index
-** "Modify/Analyze APIs":https://github.com/Netflix/exhibitor/wiki/REST-Modify
-**    [[Manager_QuickStart]]
-**    [[Node_QuickStart]]
+* [[QuickStart]]<br/>
+* <p>[[Manager_QuickStart]]</p>
+* <p>[[Node_QuickStart]]</p>
 * [[AdminGuide]]
 * [[DevGuide]]
