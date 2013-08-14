@@ -18,10 +18,10 @@
 <p> </p>
 <h1>环境安装</h1>
 <h3>1.  manager安装</h3>
-<p>      Otter Manager QuickStart： [Manager_Quickstart]
+<p>      Otter Manager QuickStart： [[Manager_Quickstart]]
 <p> </p>
 <h3>2.  node安装</h3>
-<p>      Otter Node QuickStart : [Node_Quickstart]
+<p>      Otter Node QuickStart : [[Node_Quickstart]]
 <p> </p>
 <h1>操作演示</h1>
 <p>     操作步骤：</p>
