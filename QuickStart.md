@@ -25,22 +25,19 @@
 <p> </p>
 <h1>操作演示</h1>
 <p>     操作步骤：</p>
-<p>&nbsp;&nbsp;&nbsp;        1.  添加canal</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  提供数据库ip信息</p>
-<p>&nbsp;&nbsp;&nbsp;        2.  添加数据库 </p>
+<p>&nbsp;&nbsp;&nbsp;        1.  添加数据库 </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a.  源库</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             b.  目标库</p>
-<p>&nbsp;&nbsp;&nbsp;        2.  添加channel</p>
-<p>&nbsp;&nbsp;&nbsp;        3.  添加pipeline </p>
+<p>&nbsp;&nbsp;&nbsp;        2.  添加canal</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  提供数据库ip信息</p>
+<p>&nbsp;&nbsp;&nbsp;        3.  添加channel</p>
+<p>&nbsp;&nbsp;&nbsp;        4.  添加pipeline </p>
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  选择node节点</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             b.  选择canal</p>
-<p>&nbsp;&nbsp;&nbsp;        4.  添加同步映射规则 </p>
+<p>&nbsp;&nbsp;&nbsp;        5.  添加同步映射规则 </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a.  定义源表和目标表的同步关系<span style="font-size: 12px; line-height: 1.5;"><br></span></p>
-<p>&nbsp;&nbsp;&nbsp;        5.  添加监控</p>
-<p>&nbsp;&nbsp;&nbsp;        6.  启动</p>
+<p>&nbsp;&nbsp;&nbsp;        7.  启动</p>
 <p>     演示视频： 待完善.  </p>
 </div>
-    
-
   </div>
 </div>
