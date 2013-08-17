@@ -8,7 +8,7 @@
 载入：<pre name="code" class="java">source otter-manager-schema.sql</pre>
 <p style="font-size: 14px;"> </p>
 <p style="font-size: 14px;">2.  整个otter架构依赖了zookeeper进行多节点调度，所以需要预先安装zookeeper，不需要初始化节点，otter程序启动后会自检. </p>
-<p style="font-size: 14px;">&nbsp;&nbsp;&nbsp;     a.  安装zookeeper，这里不展开，网上一搜一大把</p>
+<p style="font-size: 14px;">&nbsp;&nbsp;&nbsp;     a.  manager需要在otter.properties中指定一个就近的zookeeper集群机器</p>
 <p style="font-size: 14px;"> </p>
 <h1><strong>启动步骤</strong></h1>
 <p style="font-size: 14px;"><strong>    </strong>1.  下载otter manager</p>
@@ -47,7 +47,7 @@ otter.communication.manager.port = 1099
 otter.communication.pool.size = 10
 
 ## default zookeeper address
-otter.zookeeper.cluster.default = 127.0.0.1:2181 #修改为正确的地址
+otter.zookeeper.cluster.default = 127.0.0.1:2181 #修改为正确的地址，手动选择一个地域就近的zookeeper集群列表
 ## default zookeeper sesstion timeout = 90s
 otter.zookeeper.sessionTimeout = 90000
 
