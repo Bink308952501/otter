@@ -1,3 +1,18 @@
+<h1>项目介绍</h1>
+<p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">名称：otter ['ɒtə(r)]</p>
+<p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">译意： 水獭，数据搬运工</p>
+<p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">语言： 纯java开发</p>
+<p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">定位： 基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql/oracle数据库. </p>
+<p> </p>
+<h1>工作原理</h1>
+<p><img width="848" src="http://dl2.iteye.com/upload/attachment/0088/1189/d420ca14-2d80-3d55-8081-b9083606a801.jpg" height="303" alt=""></p>
+<p>原理描述：</p>
+<p>1.   基于Canal开源产品，获取数据库增量日志数据。 什么是Canal,  请<a href="https://github.com/alibaba/canal">点击</a></p>
+<p>2.   典型管理系统架构，manager(web管理)+node(工作节点)</p>
+<p>&nbsp;&nbsp;&nbsp;     a.  manager运行时推送同步配置到node节点</p>
+<p>&nbsp;&nbsp;&nbsp;     b.  node节点将同步状态反馈到manager上</p>
+<p>3.  基于zookeeper，解决分布式状态调度的，允许多node节点之间协同工作. </p>
+<p> </p>
 <h1>otter能解决什么？</h1>
 <p>1.  异构库同步</p>
 <p>&nbsp;&nbsp;&nbsp;   a.  mysql -&gt;  mysql/oracle.  (目前开源版本只支持mysql增量，目标库可以是mysql或者oracle，取决于canal的功能)</p>
@@ -34,7 +49,22 @@
 <p>   &nbsp;&nbsp;&nbsp;b.  5000tps ，延迟10s</p>
 ps. 性能指标取决于目标数据库性能，数据大小等多个因素，单机房100b大小，极限tps可以1w+
 <p> </p>
-
+<h1>相关名词解释</h1>
+<p style="font-size: 14px;"> </p>
+<h3 style="font-size: 14px;">otter核心model关系图</h3>
+<p style="font-size: 14px;"><img alt="" src="http://dl2.iteye.com/upload/attachment/0088/3048/a5583dc2-a337-3583-8b92-04298ef6fb74.jpg" height="409" width="545"></p>
+<p style="font-size: 14px;"> </p>
+<h3 style="font-size: 14px;">名词解释</h3>
+<ul>
+<li>Pipeline：从源端到目标端的整个过程描述，主要由一些同步映射过程组成</li>
+<li>Channel：同步通道，单向同步中一个Pipeline组成，在双向同步中有两个Pipeline组成</li>
+<li>DateMediaPair：根据业务表定义映射关系，比如源表和目标表，字段映射，字段组等</li>
+<li>DateMedia : 抽象的数据介质概念，可以理解为数据表/mq队列定义</li>
+<li>DateMediaSource : 抽象的数据介质源信息，补充描述DateMedia</li>
+<li>ColumnPair : 定义字段映射关系</li>
+<li>ColumnGroup : 定义字段映射组</li>
+<li>Node : 处理同步过程的工作节点，对应一个jvm</li>
+</ul>
 <h1>相关实现介绍</h1>
 * &nbsp;&nbsp;&nbsp;[[Otter调度模型]]
 * &nbsp;&nbsp;&nbsp;[[Otter数据入库算法]]
