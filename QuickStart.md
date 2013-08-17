@@ -33,7 +33,20 @@
 <h1>操作演示</h1>
 <h3> 演示视频（5分钟教你配置一个同步任务）：请点击图片或者<font color="red"><a href="http://www.tudou.com/programs/view/Q-qnCg7d-ew">这里</a></font> </p></h3>
 [![ScreenShot](http://dl2.iteye.com/upload/attachment/0088/3012/4409999b-486f-36d7-a425-962b941b3b15.jpg)](http://www.tudou.com/programs/view/Q-qnCg7d-ew)
-----
+
+<p>    演示说明：</p>
+<p>&nbsp;&nbsp;&nbsp;1.  搭建一个数据库同步任务，源数据库ip为：10.20.144.25，目标数据库ip为：10.20.144.29.  源数据库已开启binlog，并且binlog_format为ROW. </p>
+<pre class="java" name="code">mysql&gt; show variables like '%binlog_format%';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| binlog_format | ROW   |
++---------------+-------+</pre>
+<p>&nbsp;&nbsp;&nbsp;2.  数据同步精确到一张表进行测试，测试的表名为test.example，简单包含两个子段，测试过程中才创建. </p>
+<p>&nbsp;&nbsp;&nbsp;3.  配置完成后，手动在源库插入数据，然后快速在目标库进行查看数据，验证数据是否同步成功. </p>
+<p></p>
+-------
+
 视频中的演示文本：
 <pre>
 CREATE TABLE  `test`.`example` (
