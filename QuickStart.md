@@ -19,6 +19,7 @@
 <p> &nbsp;&nbsp;&nbsp;    所以，manager启动完成后，需要首先定义不同机房的zookeeper机器集群。</p>
 <p> </p>
 <p> &nbsp;&nbsp;&nbsp;    比如：目前otter使用的zookeeper集群，在杭州会有3个机房，分别部署3+2+2台机器组成一个leader/follower集群，在美国一个机房部署2台机器，做为杭州机房zookeeper的observer(读镜像)，(observer模式特点：读请求在自己本地，写请求代理到leader/follower上投票处理，然后异步接收leader的写结果反馈. )</p>
+<p>observer配置文档： <a href="http://zookeeper.apache.org/doc/trunk/zookeeperObservers.html">http://zookeeper.apache.org/doc/trunk/zookeeperObservers.html</a></p>
 <h1><img src="http://dl2.iteye.com/upload/attachment/0088/3018/78d22c08-f1e5-3f2a-862e-ce8ebf3db6d3.png" height="360" width="599" alt=""></h1>
 <p>说明：添加了zookeeper集群后，会在添加node和canal时自动出现在可选列表里。 这也是添加node和canal的一个前提</p>
 <p> </p>
