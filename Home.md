@@ -21,7 +21,7 @@
 <p>See the page for quick start: [[QuickStart]].</p>
 <p> </p>
 <h1>AdminGuide</h1>
-<p>See the page for admin deploy guide : AdminGuide</p>
+<p>See the page for admin deploy guide : [[AdminGuide]]</p>
 <p> </p>
 <h1>问题反馈</h1>
 <p>1.  <span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">qq交流群： 161559791</span></p>
