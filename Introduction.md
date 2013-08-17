@@ -34,3 +34,11 @@
 <p>   &nbsp;&nbsp;&nbsp;b.  5000tps ，延迟10s</p>
 ps. 性能指标取决于目标数据库性能，数据大小等多个因素，单机房100b大小，极限tps可以1w+
 <p> </p>
+
+<h1>相关实现介绍</h1>
+* &nbsp;&nbsp;&nbsp;[[Otter调度模型]]
+* &nbsp;&nbsp;&nbsp;[[Otter数据入库算法]]
+* &nbsp;&nbsp;&nbsp;[[Otter双向回环控制]]
+* &nbsp;&nbsp;&nbsp;[[Otter数据一致性]]
+* &nbsp;&nbsp;&nbsp;[[Otter高可用性]]
+* &nbsp;&nbsp;&nbsp;[[Otter扩展性]]
