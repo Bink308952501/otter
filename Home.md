@@ -4,7 +4,7 @@
 <p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">名称：otter ['ɒtə(r)]</p>
 <p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">译意： 水獭，数据搬运工</p>
 <p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">语言： 纯java开发</p>
-<p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">定位： 基于数据库增量日志解析，准实时同步到本机房或跨机房的mysql/oracle数据库. </p>
+<p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">定位： 基于数据库增量日志解析，准实时同步到本机房或异地机房的mysql/oracle数据库. </p>
 <p> </p>
 <h1>工作原理</h1>
 <p><img width="848" src="http://dl2.iteye.com/upload/attachment/0088/1189/d420ca14-2d80-3d55-8081-b9083606a801.jpg" height="303" alt=""></p>
@@ -22,7 +22,7 @@
 <p>&nbsp;&nbsp;&nbsp;   a. 数据库版本升级</p>
 <p>&nbsp;&nbsp;&nbsp;   b. 数据表迁移</p>
 <p>&nbsp;&nbsp;&nbsp;   c. 异步二级索引</p>
-<p>3.  跨机房同步 (比如阿里巴巴国际站就是杭州和美国机房的数据库同不，RTT &gt; 200ms，<strong>亮点</strong>)</p>
+<p>3.  异地机房同步 (比如阿里巴巴国际站就是杭州和美国机房的数据库同不，RTT &gt; 200ms，<strong>亮点</strong>)</p>
 <p>&nbsp;&nbsp;&nbsp;   a. 机房容灾</p>
 <p>4.  双向同步</p>
 <p>&nbsp;&nbsp;&nbsp;    a.  避免回环算法  (通用的解决方案，支持大部分关系型数据库)</p>
@@ -36,7 +36,7 @@
 <p>   &nbsp;&nbsp;&nbsp;a.  数据on-Fly，尽可能不落地，更快的进行数据同步.  (开启node <span style="line-height: 1.5;">loadBalancer算法，如果Node节点S+ETL落在不同的Node上，数据会有个网络传输过程</span><span style="line-height: 1.5;">)</span></p>
 <p>   &nbsp;&nbsp;&nbsp;b.  node节点可以有failover /  loadBalancer.  </p>
 <p> </p>
-<h3>跨机房复制示意图：</h3>
+<h3>异地机房复制示意图：</h3>
 <p><img height="332" width="667" src="http://dl2.iteye.com/upload/attachment/0088/1981/5369b533-5b9a-32e6-bbc0-14c407188e93.jpg" alt=""></p>
 <p>说明： </p>
 <p>   &nbsp;&nbsp;&nbsp;a.  数据涉及网络传输，S/E/T/L几个阶段会分散在2个或者更多Node节点上，多个Node之间通过zookeeper进行协同工作  (一般是Select和Extract在一个机房的Node，Transform/Load落在另一个机房的Node)</p>
@@ -46,7 +46,7 @@
 <p>1.  单机房同步</p>
 <p>   &nbsp;&nbsp;&nbsp;a.  100tps ， 延迟100ms</p>
 <p>   &nbsp;&nbsp;&nbsp;b.  5000tps,  延迟1s</p>
-<p>2.  中美跨机房同步</p>
+<p>2.  中美异地机房同步</p>
 <p>   &nbsp;&nbsp;&nbsp;a.  100tps ， 延迟2s</p>
 <p>   &nbsp;&nbsp;&nbsp;b.  5000tps ，延迟10s</p>
 ps. 性能指标取决于目标数据库性能，数据大小等多个因素，单机房100b大小，极限tps可以1w+
