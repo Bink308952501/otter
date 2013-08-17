@@ -2,7 +2,7 @@
 
 * [[Home]]
 * [[Introduction]]<br/>
-* &nbsp;&nbsp;&nbsp;[[Otter同步算法]]
+* &nbsp;&nbsp;&nbsp;[[Otter数据入库算法]
 * [[QuickStart]]<br/>
 * &nbsp;&nbsp;&nbsp;[[Manager_QuickStart]]
 * &nbsp;&nbsp;&nbsp;[[Node_QuickStart]]
