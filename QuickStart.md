@@ -24,7 +24,7 @@
 <p>      Otter Node QuickStart : [[Node_Quickstart]]
 <p> </p>
 <h1>操作演示</h1>
-<p>     演示视频： 待完善.  </p>
+<p> 演示视频：请点击图片或者<font color="red"><a href="http://www.tudou.com/programs/view/Q-qnCg7d-ew">这里</a></font> </p>
 [![ScreenShot](http://dl2.iteye.com/upload/attachment/0088/3012/4409999b-486f-36d7-a425-962b941b3b15.jpg)](http://www.tudou.com/programs/view/Q-qnCg7d-ew)
 ----
 视频中的演示文本：
