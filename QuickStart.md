@@ -24,26 +24,39 @@
 <p>      Otter Node QuickStart : [[Node_Quickstart]]
 <p> </p>
 <h1>操作演示</h1>
-<p>     操作步骤：</p>
-<p>&nbsp;&nbsp;&nbsp;        1.  添加数据库 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a.  源库</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             b.  目标库</p>
-<p>&nbsp;&nbsp;&nbsp;        2.  添加canal</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  提供数据库ip信息</p>
-<p>&nbsp;&nbsp;&nbsp;        3.  添加同步表信息</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  源数据表</p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  目标数据表</p>
-<p>&nbsp;&nbsp;&nbsp;        4.  添加channel</p>
-<p>&nbsp;&nbsp;&nbsp;        5.  添加pipeline </p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a.  选择node节点</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             b.  选择canal</p>
-<p>&nbsp;&nbsp;&nbsp;        6.  添加同步映射规则 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a.  定义源表和目标表的同步关系<span style="font-size: 12px; line-height: 1.5;">
-<p>&nbsp;&nbsp;&nbsp;        7.  启动 </p>
-<p>&nbsp;&nbsp;&nbsp;        8.  测试数据 </p>
-<br></span></p>
-
 <p>     演示视频： 待完善.  </p>
+----
+视频中的演示文本：
+<pre>
+CREATE TABLE  `test`.`example` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) COLLATE utf8_bin DEFAULT NULL ,
+   PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into test.example(id,name) values(null,'hello');
+
+-----
+Otter QuickStart 如何配置一个任务
+-----
+操作步骤：
+1.  添加数据库
+    a.  源库 jdbc:mysql://10.20.144.25:3306
+    b.  目标库 jdbc:mysql://10.20.144.29:3306
+2.  添加canal
+    a.  提供数据库ip信息 
+3.  添加同步表信息
+    a.  源数据表 test.example
+    b.  目标数据表 test.example
+4.  添加channel
+5.  添加pipeline
+    a.  选择node节点
+    b.  选择canal
+6.  添加同步映射规则
+    a.  定义源表和目标表的同步关系
+7.  启动
+8.  测试数据 
+</pre>
 </div>
   </div>
 </div>
