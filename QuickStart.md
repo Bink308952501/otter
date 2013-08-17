@@ -25,6 +25,7 @@
 <p> </p>
 <h1>操作演示</h1>
 <p>     演示视频： 待完善.  </p>
+[![ScreenShot](http://dl2.iteye.com/upload/attachment/0088/3012/4409999b-486f-36d7-a425-962b941b3b15.jpg)](http://www.tudou.com/programs/view/Q-qnCg7d-ew)
 ----
 视频中的演示文本：
 <pre>
