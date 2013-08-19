@@ -44,6 +44,8 @@
 <p>See the page for FAQ: [[FAQ]]</p>
 <p> </p>
 <h1>问题反馈</h1>
+<h3>注意：canal&otter QQ讨论群已经建立，群号：161559791 ，欢迎加入进行技术讨论。</h3>
+
 <p>1.  <span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">qq交流群： 161559791</span></p>
 <p><span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">2.  </span><span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">邮件交流： jianghang115@gmail.com</span></p>
 <p><span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">3.  </span><span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">新浪微博： agapple0002</span></p>
