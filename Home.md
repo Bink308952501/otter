@@ -28,6 +28,8 @@
 <p>&nbsp;&nbsp;&nbsp;     a.  manager运行时推送同步配置到node节点</p>
 <p>&nbsp;&nbsp;&nbsp;     b.  node节点将同步状态反馈到manager上</p>
 <p>3.  基于zookeeper，解决分布式状态调度的，允许多node节点之间协同工作. </p>
+<h3>什么是canal? </h3>
+otter之前开源的一个子项目，开源链接地址：<a href="http://github.com/alibaba/canal">http://github.com/alibaba/canal</a>
 <p> </p>
 <h1>Introduction</h1>
 <p>See the page for quick start: [[Introduction]].</p>
