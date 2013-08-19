@@ -15,3 +15,4 @@
 * &nbsp;&nbsp;&nbsp;[[Manager使用介绍]]
 * &nbsp;&nbsp;&nbsp;[[Manager配置介绍]]
 * [[相关PPT&PDF]]
+* [[FAQ]]
