@@ -40,6 +40,9 @@
 <h1>相关文档</h1>
 <p>See the page for 文档: [[相关PPT&PDF]]</p>
 <p> </p>
+<h1>常见问题</h1>
+<p>See the page for FAQ: [[FAQ]]</p>
+<p> </p>
 <h1>问题反馈</h1>
 <p>1.  <span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">qq交流群： 161559791</span></p>
 <p><span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">2.  </span><span style="color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">邮件交流： jianghang115@gmail.com</span></p>
