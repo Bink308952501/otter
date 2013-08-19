@@ -65,6 +65,13 @@ ps. 性能指标取决于目标数据库性能，数据大小等多个因素，�
 <li>ColumnGroup : 定义字段映射组</li>
 <li>Node : 处理同步过程的工作节点，对应一个jvm</li>
 </ul>
+----
+<h3 style="font-size: 14px;">otter的S/E/T/L stage阶段模型</h3>
+<p><img alt="" src="http://dl2.iteye.com/upload/attachment/0088/3073/6d6e4f03-23df-3759-b7db-370e08c7b34c.png"></p>
+说明：为了更好的支持系统的扩展性和灵活性，将整个同步流程抽象为Select/Extract/Transform/Load，这么4个阶段. 
+<p>Select阶段: 为解决数据来源的差异性，比如接入canal获取增量数据，也可以接入其他系统获取其他数据等。</p>
+<p>Extract/Transform/Load 阶段：类似于数据仓库的ETL模型，具体可为数据join，数据转化，数据Load的</p>
+<p> </p>
 <h1>相关实现介绍</h1>
 * &nbsp;&nbsp;&nbsp;[[Otter调度模型]]
 * &nbsp;&nbsp;&nbsp;[[Otter数据入库算法]]
