@@ -20,10 +20,6 @@
 <p><img style="font-size: 12px; line-height: 1.5;" width="306" alt="" height="232" src="http://dl2.iteye.com/upload/attachment/0088/3053/050fca62-3302-3380-8c0c-d8afae648a35.png"></p>
 <p>在正式介绍otter调度模型之前，我们首先得了解TCP/IP协议在解决此类"差网络"环境的一些处理方案，从中借鉴相应的方案.  </p>
 <p> </p>
-<p><img alt="" src="http://dl2.iteye.com/upload/attachment/0088/3073/6d6e4f03-23df-3759-b7db-370e08c7b34c.png"></p>
-<p>在介绍之前，首先要了解一下otter的概念模型，S/E/T/L模块，不同的模块复制各自的业务，如果要扩展也只需要扩展其中的一个模块即可。</p>
-<p>这其中主要是引入了数据仓库中的ETL模型，支持系统的扩展性，增加了Select模块，解决数据来源的差异性问题. </p>
-<p> </p>
 <h3>Nagle算法</h3>
 <p>通过<a href="https://github.com/alibaba/canal">Canal</a>解决Nagle算法，Canal之前是做为otter的一个子项目，为解决otter的数据增量获取的机制，并为otter项目的特点而量身打造了几个feature. </p>
 <p> </p>
