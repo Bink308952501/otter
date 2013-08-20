@@ -12,8 +12,8 @@
 <p style="font-size: 14px;"> </p>
 <h1><strong>启动步骤</strong></h1>
 <p style="font-size: 14px;"><strong>    </strong>1.  下载otter manager</p>
-<p style="font-size: 14px;">     直接下载 ，可访问：https://github.com/agapple/otter_download/ ，会列出所有历史的发布版本包下载方式，比如以x.y.z版本为例子：</p>
-<pre name="code" class="shello">wget https://raw.github.com/agapple/otter_download/master/manager.deployer-x.y.z.tar.gz</pre>
+<p style="font-size: 14px;">     直接下载 ，可访问：https://github.com/alibaba/otter/releases ，会列出所有历史的发布版本包下载方式，比如以x.y.z版本为例子：</p>
+<pre name="code" class="shello">wget https://github.com/alibaba/otter/releases/download/otter-x.y.z/manager.deployer-x.y.z.tar.gz</pre>
     or
 <p style="margin-top: 15px; margin-bottom: 15px; color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;">    自己编译</p>
 <pre name="code" class="shell">git clone git@github.com:alibaba/otter.git
