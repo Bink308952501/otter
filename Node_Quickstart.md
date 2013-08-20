@@ -28,8 +28,8 @@
 <p> </p>
 <h1>启动步骤</h1>
 <p>1.  下载otter node</p>
-<p>    &nbsp;&nbsp;&nbsp;直接下载 ，可访问：https://github.com/agapple/otter_download/ ，会列出所有历史的发布版本包下载方式，比如以x.y.z版本为例子：</p>
-<pre class="java" name="code">wget https://raw.github.com/agapple/otter_download/master/node.deployer-x.y.z.tar.gz  </pre>
+<p>    &nbsp;&nbsp;&nbsp;直接下载 ，可访问：https://github.com/alibaba/otter/releases ，会列出所有历史的发布版本包下载方式，比如以x.y.z版本为例子：</p>
+<pre class="java" name="code">wget https://github.com/alibaba/otter/releases/download/otter-x.y.z/node.deployer-x.y.z.tar.gz</pre>
 <p> or </p>
 <p>   &nbsp;&nbsp;&nbsp;自己编译</p>
 <pre class="java" name="code">git clone git@github.com:alibaba/otter.git  
