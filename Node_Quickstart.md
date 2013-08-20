@@ -53,8 +53,6 @@ otter.htdocs.dir = ${otter.nodeHome}/htdocs
 otter.download.dir = ${otter.nodeHome}/download
 otter.extend.dir= ${otter.nodeHome}/extend
 
-## default zookeeper address
-otter.zookeeper.cluster.default = 127.0.0.1:2181
 ## default zookeeper sesstion timeout = 90s
 otter.zookeeper.sessionTimeout = 90000
 
