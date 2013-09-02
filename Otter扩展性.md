@@ -40,7 +40,6 @@ public interface EventProcessor {
 <ul>
 <li>EventProcessor扩展：<a href="https://github.com/alibaba/otter/blob/master/node/extend/src/main/java/com/alibaba/otter/node/extend/processor/TestEventProcessor.java">TestEventProcessor</a> </li>
 <li>FileResolver扩展：<a href="https://github.com/alibaba/otter/blob/master/node/extend/src/main/java/com/alibaba/otter/node/extend/fileresolver/TestFileResolver.java">TestFileResolver</a> </li>
-<li> </li>
 </ul>
 <h3>组件功能性扩展 </h3>
 <p>  目前这块扩展性机制不够，设计时只预留了接口，但新增一个功能实现，需要通过硬编码的方式去进行，下载otter的源码，增加功能支持，修改spring配置，同时修改web页面，方便使用。</p>
