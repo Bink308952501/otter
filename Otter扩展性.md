@@ -36,6 +36,12 @@ public interface EventProcessor {
     public EventData process(EventData eventData);
 }</pre>
 <p> </p>
+<h4>扩展示例代码</h4>
+<ul>
+<li>EventProcessor扩展：<a href="https://github.com/alibaba/otter/blob/master/node/extend/src/main/java/com/alibaba/otter/node/extend/processor/TestEventProcessor.java">TestEventProcessor</a> </li>
+<li>FileResolver扩展：<a href="https://github.com/alibaba/otter/blob/master/node/extend/src/main/java/com/alibaba/otter/node/extend/fileresolver/TestFileResolver.java">TestFileResolver</a> </li>
+<li> </li>
+</ul>
 <h3>组件功能性扩展 </h3>
 <p>  目前这块扩展性机制不够，设计时只预留了接口，但新增一个功能实现，需要通过硬编码的方式去进行，下载otter的源码，增加功能支持，修改spring配置，同时修改web页面，方便使用。</p>
 <p>  基于manager的灵活扩展性的实现，暂没有想到很好的办法，如果你有好的思路和实现方式，也可以告知我们，谢谢。</p>
