@@ -63,7 +63,7 @@ otter.manager.address = ${otter.domainName}:${otter.communication.manager.port}
 <p> </p>
 <p style="font-size: 14px;">   5. 查看日志</p>
 <p style="font-size: 14px;"> </p>
-<pre name="code" class="java">vi logs/webx.log</pre>
+<pre name="code" class="java">vi logs/manager.log</pre>
 <pre name="code" class="java">2013-08-14 13:19:45.911 [] WARN  com.alibaba.otter.manager.deployer.JettyEmbedServer - ##Jetty Embed Server is startup!
 2013-08-14 13:19:45.911 [] WARN  com.alibaba.otter.manager.deployer.OtterManagerLauncher - ## the manager server is running now ......</pre>
     出现类似日志，代表启动成功
