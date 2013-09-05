@@ -34,7 +34,7 @@ otter.port = 8080
 ## jetty web config xml
 otter.jetty = jetty.xml
 
-## otter manager database config   #修改为正确数据库信息
+## otter manager database config ，修改为正确数据库信息
 otter.database.driver.class.name = com.mysql.jdbc.Driver
 otter.database.driver.url = jdbc:mysql://127.0.01:3306/ottermanager
 otter.database.driver.username = root
@@ -46,8 +46,8 @@ otter.communication.manager.port = 1099
 ## otter communication pool size
 otter.communication.pool.size = 10
 
-## default zookeeper address
-otter.zookeeper.cluster.default = 127.0.0.1:2181 #修改为正确的地址，手动选择一个地域就近的zookeeper集群列表
+## default zookeeper address，修改为正确的地址，手动选择一个地域就近的zookeeper集群列表
+otter.zookeeper.cluster.default = 127.0.0.1:2181
 ## default zookeeper sesstion timeout = 90s
 otter.zookeeper.sessionTimeout = 90000
 
