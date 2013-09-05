@@ -59,8 +59,8 @@ otter.zookeeper.sessionTimeout = 90000
 ## otter communication pool size
 otter.communication.pool.size = 10
 
-## otter arbitrate &amp; node connect manager config
-otter.manager.address = 127.0.0.1:1099    #修改为正确的manager服务地址
+## otter arbitrate &amp; node connect manager config ， 修改为正确的manager服务地址
+otter.manager.address = 127.0.0.1:1099
 </pre>
 <p> </p>
 <p>4.  准备启动</p>
@@ -68,14 +68,14 @@ otter.manager.address = 127.0.0.1:1099    #修改为正确的manager服务地址
 <p> </p>
 <p>5.  查看日志  </p>
 <p>    如果manager页面的ip配置不正确，会出现类似错误：</p>
-<p>    打开日志： vi bin/nohup.sh </p>
+<p>    打开日志： vi logs/node/node.log </p>
 <pre class="java" name="code">Exception in thread "main" java.lang.IllegalArgumentException: node[1] ip[127.0.0.1] port[2088] , but your host ip[10.12.48.215] is not matched!
         at com.alibaba.otter.node.etl.OtterController.checkNidVaild(OtterController.java:245)
         at com.alibaba.otter.node.etl.OtterController.initNid(OtterController.java:230)
         at com.alibaba.otter.node.etl.OtterController.start(OtterController.java:73)
         at com.alibaba.otter.node.deployer.OtterLauncher.main(OtterLauncher.java:25)</pre>
 <p>    此时修改ip为对应的host ip后，再次启动即可。 </p>
-<pre class="java" name="code">vi logs/otter/otter.log</pre>
+<pre class="java" name="code">vi logs/node/node.log</pre>
 <pre class="java" name="code">2013-08-14 15:42:16.886 [main] INFO  com.alibaba.otter.node.deployer.OtterLauncher - INFO ## the otter server is running now ......</pre>
 <p>    看到如下日志，代表node启动完成.  </p>
 <p> </p>
