@@ -1,1 +1,49 @@
-待完善
+ <div class="blog_content">
+    <div class="iteye-blog-content-contain" style="font-size: 14px;">
+<h1>常见问题</h1>
+<h3> 1.  canal和otter的关系？</h3>
+<p> 答： 在回答这问题之前，首先来看一张canal&amp;otter和mysql复制的类比图.  </p>
+<p><img alt="" src="http://dl2.iteye.com/upload/attachment/0089/0118/f230f237-d6f4-309f-b9ac-bd454da9b69a.jpg" width="655" height="474"></p>
+<p>mysql的自带复制技术可分成三步：</p>
+<ol>
+<li>master将改变记录到二进制日志(binary log)中（这些记录叫做二进制日志事件，binary log events，可以通过show binlog events进行查看）；</li>
+<li>slave将master的binary log events拷贝到它的中继日志(relay log)，这里是I/O thread线程.  </li>
+<li>slave重做中继日志中的事件，将改变反映它自己的数据，这里是SQL thread线程.  </li>
+</ol>
+<p>基于canal&amp;otter的复制技术和mysql复制类似，具有类比性.  </p>
+<ol>
+<li>Canal对应于I/O thread，接收Master Binary Log. </li>
+<li>Otter对应于SQL thread，通过Canal获取Binary Log数据，执行同步插入数据库. </li>
+</ol>
+<p>两者的区别在于：</p>
+<ol>
+<li>otter目前嵌入式依赖canal，部署为同一个jvm，目前设计为不产生Relay Log，数据不落地. </li>
+<li>otter目前允许自定义同步逻辑，解决各类需求.  <br>a.  ETL转化.  比如Slave上目标表的表名，字段名，字段类型不同，字段个数不同等. <br>b.  异构数据库.  比如Slave可以是oracle或者其他类型的存储,nosql等. <br>c.  M-M部署，解决数据一致性问题<br>d.  基于manager部署，方便监控同步状态和管理同步任务.  </li>
+</ol>
+<h3>2.  canal目前支持的数据库版本？</h3>
+<p>答： 支持mysql系列的5.1 ~ 5.6版本，目前maridb经测试暂不支持.   (全面支持ROW/STATEMENT/MIXED几种binlog格式的解析)</p>
+<p> </p>
+<h3>3.  otter目前支持的数据库情况？</h3>
+<p>答：这里总结了一下</p>
+<ol>
+<li>从问题1中的图中看到，otter依赖canal解决数据库增量日志，所以会收到canal的版本支持限制，仅支持mysql系列，不支持oracle做为master库进行解析. </li>
+<li>mysql做为master，otter只支持ROW模式的数据同步，其他两种模式不支持.  (只有ROW模式可保证数据的最终一致性)</li>
+<li>目标库，也就是slave，可支持mysql/oracle，也就是说可以将mysql的数据同步到oracle库中，反过来不行. </li>
+</ol>
+<h3>4.  otter目前存在的同步限制？</h3>
+<p>答：这里总结了一下</p>
+<ol>
+<li><span style="line-height: 21px;">暂不支持无主键表同步.  (同步的表必须要有主键，无主键表update会是一个全表扫描，效率比较差)</span></li>
+<li><span style="line-height: 21px;">支持部分ddl同步  (支持create table / drop table / alter table / truncate table / rename table / create index / drop index，其他类型的暂不支持，比如grant,create user,trigger等等)，同时ddl语句不支持幂等性操作，所以出现重复同步时，会导致同步挂起，可通过配置高级参数:跳过ddl异常，来解决这个问题.  </span></li>
+</ol>
+<h3>5.  otter同步相比于mysql的优势？</h3>
+<p>答：</p>
+<ol>
+<li>管理&amp;运维方便.  otter为纯java开发的系统，提供web管理界面，一站式管理整个公司的数据库同步任务.  </li>
+<li>同步效率提升.  在保证数据一致性的前提下，拆散原先Master的事务内容，基于pk hash的并发同步，可以有效提升5倍以上的同步效率. </li>
+<li>自定义同步功能.   支持基于增量复制的前提下，定义ETL转化逻辑，完成特殊功能. </li>
+<li>异地机房同步.   相比于mysql异地长距离机房的复制效率，比如阿里巴巴杭州和美国机房，复制可以提升20倍以上. 长距离传输时，master向slave传输binary log可能会是一个瓶颈.</li>
+<li>双A机房同步.   目前mysql的M-M部署结构，不支持解决数据的一致性问题，基于otter的双向复制+一致性算法，可完美解决这个问题，真正实现双A机房. </li>
+<li>特殊功能.  <br>a.  支持图片同步.  数据库中的一条记录，比如产品记录，会在数据库里存在一张图片的path路径，可定义规则，在同步数据的同时，将图片同步到目标.  </li>
+</ol>
+</div>
