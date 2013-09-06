@@ -71,7 +71,9 @@ otter.manager.address = ${otter.domainName}:${otter.communication.manager.port}
 <p style="font-size: 14px;">   </p>
 <p style="font-size: 14px;">   6.   验证</p>
 <p style="font-size: 14px;">         访问： http://127.0.0.1:8080/，出现otter的页面，即代表启动成功     </p>
-<p style="font-size: 14px;"><br><img src="http://dl2.iteye.com/upload/attachment/0088/1833/d81cd060-546c-312e-9a64-82ebd35f4f33.png" alt=""><br>    7.   关闭</p>
+<p style="font-size: 14px;"><br><img src="http://dl2.iteye.com/upload/attachment/0088/1833/d81cd060-546c-312e-9a64-82ebd35f4f33.png" alt=""><br>    
+<p style="font-size: 14px;">         访问：http://10.20.144.34:8080/login.htm，初始密码为：admin/admin，即可完成登录. 目前：匿名用户只有只读查看的权限，登录为管理员才可以有操作权限</p>
+7.   关闭</p>
 <pre name="code" class="java">sh stop.sh</pre>
 </div>
 <div class="iteye-blog-content-contain">    it's over.   </div>
