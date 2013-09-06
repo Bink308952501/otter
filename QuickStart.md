@@ -30,6 +30,9 @@
 <h3>2.  node安装</h3>
 <p>      Otter Node QuickStart : [[Node_Quickstart]]
 <p> </p>
+
+<h3>网友分享</h3>
+网友安装otter过程记录，供未接触java/mvn开发的运维人员使用 ：<a  href="http://blog.sina.com.cn/s/articlelist_1869333262_0_1.html">http://blog.sina.com.cn/s/articlelist_1869333262_0_1.html</a>
 <h1>操作演示</h1>
 <h3> 演示视频（5分钟教你配置一个同步任务）：请点击图片或者<font color="red"><a href="http://www.tudou.com/programs/view/Q-qnCg7d-ew">这里</a></font> </p></h3>
 [![ScreenShot](http://dl2.iteye.com/upload/attachment/0088/3012/4409999b-486f-36d7-a425-962b941b3b15.jpg)](http://www.tudou.com/programs/view/Q-qnCg7d-ew)
