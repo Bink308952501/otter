@@ -35,6 +35,8 @@
 <ol>
 <li><span style="line-height: 21px;">暂不支持无主键表同步.  (同步的表必须要有主键，无主键表update会是一个全表扫描，效率比较差)</span></li>
 <li><span style="line-height: 21px;">支持部分ddl同步  (支持create table / drop table / alter table / truncate table / rename table / create index / drop index，其他类型的暂不支持，比如grant,create user,trigger等等)，同时ddl语句不支持幂等性操作，所以出现重复同步时，会导致同步挂起，可通过配置高级参数:跳过ddl异常，来解决这个问题.  </span></li>
+<li><span style="line-height: 21px;">不支持带外键的记录同步.  (数据载入算法会打算事务，进行并行处理，会导致外键约束无法满足)</span></li>
+<li><span style="line-height: 21px;">数据库上trigger配置慎重.  (比如源库，有一张A表配置了trigger，将A表上的变化记录到B表中，而B表也需要同步。如果目标库也有这trigger，在同步时会插入一次A表，2次B表，因为A表的同步插入也会触发trigger插入一次B表，所以有2次B表同步.)</span></li>
 </ol>
 <h3>5.  otter同步相比于mysql的优势？</h3>
 <p>答：</p>
