@@ -32,7 +32,7 @@
 otter之前开源的一个子项目，开源链接地址：<a href="http://github.com/alibaba/canal">http://github.com/alibaba/canal</a>
 <p> </p>
 <h1>Introduction</h1>
-<p>See the page for quick start: [[Introduction]].</p>
+<p>See the page for Introduction: [[Introduction]].</p>
 <h1>QuickStart</h1>
 <p>See the page for quick start: [[QuickStart]].</p>
 <p> </p>
