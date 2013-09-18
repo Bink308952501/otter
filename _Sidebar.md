@@ -15,5 +15,5 @@
 * &nbsp;&nbsp;&nbsp;[[Manager使用介绍]]
 * &nbsp;&nbsp;&nbsp;[[Manager配置介绍]]
 * [[相关PPT&PDF]]
-* [[网友文档贡献]]
+* [[网友贡献]]
 * [[FAQ]]
