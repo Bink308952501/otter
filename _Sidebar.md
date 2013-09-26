@@ -14,6 +14,7 @@
 * [[AdminGuide]]
 * &nbsp;&nbsp;&nbsp;[[Manager使用介绍]]
 * &nbsp;&nbsp;&nbsp;[[Manager配置介绍]]
+* &nbsp;&nbsp;&nbsp;[[映射规则配置]]
 * [[相关PPT&PDF]]
 * [[网友贡献]]
 * [[FAQ]]
