@@ -47,7 +47,7 @@ otter之前开源的一个子项目，开源链接地址：<a href="http://githu
 <p> </p>
 
 <h1>版本相关: </h1>
-<p>1. 建议版本：4.2.3  (otter开源版本从内部演变而来，所以初始版本直接从4.x开始) </p>
+<p>1. 建议版本：4.2.4  (otter开源版本从内部演变而来，所以初始版本直接从4.x开始) </p>
 <p>2. 下载发布包：<a href="https://github.com/alibaba/otter/releases">download</href> </p>
 <p>3. maven依赖 ： 暂无 </p>
 <p>4. 详细的issues列表可查看：<a href="http://alibaba.github.io/otter/release.html">ReleaseNotes</a></p>
