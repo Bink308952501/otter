@@ -48,4 +48,14 @@
 <li>双A机房同步.   目前mysql的M-M部署结构，不支持解决数据的一致性问题，基于otter的双向复制+一致性算法，可完美解决这个问题，真正实现双A机房. </li>
 <li>特殊功能.  <br>a.  支持图片同步.  数据库中的一条记录，比如产品记录，会在数据库里存在一张图片的path路径，可定义规则，在同步数据的同时，将图片同步到目标.  </li>
 </ol>
+<h3>6.  node jvm内存不够用，如何解决？</h3>
+<p style="font-size: 14px;">node出现java.lang.OutOfMemoryError : Gc overhead limit exceeded. </p>
+<p style="font-size: 14px;">答：</p>
+<p>单node建议的同步任务，建议控制下1~2wtps以下，不然内存不够用.  出现不够用时，具体的解决方案:</p>
+<ol>
+<li>调大node的-Xms,-Xmx内存设置，默认为3G,heap区大概是2GB</li>
+<li>减少每个同步的任务内存配置.<br>a. canal配置里有个内存存储buffer记录数参数，默认是32768，代表32MB的binlog，解析后在内存中会占用100MB的样子. <br>b. pipeline配置里有个批次大小设置，默认是6000，代表每次获取6MB左右，解析后在内存占用=并行度*6MB*3，大概也是100MB的样子. </li>
+</ol>
+<p> </p>
+<p>   所以默认参数，全速跑时，单个通道占用200MB的样子，2GB能跑几个大概能估算出来了</p>
 </div>
