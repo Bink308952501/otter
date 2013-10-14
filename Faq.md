@@ -58,4 +58,24 @@
 </ol>
 <p> </p>
 <p>   所以默认参数，全速跑时，单个通道占用200MB的样子，2GB能跑几个大概能估算出来了</p>
+<h3>7.  源库binlog不正确，如何重置同步使用新的位点开始同步？</h3>
+<p>场景：</p>
+<ul>
+<li>源库binlog被删除，比如出现：Could not find first log file name in binary log index file</li>
+<li>源库binlog出现致命解析错误，比如运行过程使用了删除性质的ddl，drop table操作，导致后续binlog在解析时无法获取表结构. </li>
+</ul>
+<p>答：</p>
+<p>首先需要理解一下canal的位置管理，主要有两个位点信息：起始位置 和 运行位置(记录最后一次正常消费的位置).   优先加载运行位置，第一次启动无运行位置，就会使用起始位置进行初始化，第一次客户端反馈了ack信号后，就会记录运行位置.   </p>
+<p>所以重置位置的几步操作：</p>
+<ol>
+<li><span style="line-height: 21px;">删除运行位置.    (pipeline同步进度页面配置)<br><img alt="" height="260" src="http://dl2.iteye.com/upload/attachment/0090/1630/6b9b59ef-4175-3e9b-ad35-d73a0d7088fb.png" width="508"><br><br></span></li>
+<li><span style="line-height: 21px;">配置起始位置.   (canal配置页面)<br><img alt="" height="183" src="http://dl2.iteye.com/upload/attachment/0090/1636/9f8ec0b3-51e9-321f-a5b7-725792d06f31.png" width="516"></span></li>
+<li><span style="line-height: 21px;">检查是否生效.  (pipeline对应的日志)<span style="line-height: 21px;"><br><img alt="" height="97" src="http://dl2.iteye.com/upload/attachment/0090/1626/a1ee7cc6-775d-37e3-9ef4-edcea30c6460.png" width="739"><br></span></span></li>
+</ol>
+<p>注意点：</p>
+<ul>
+<li>如果日志中出现prepare to find start position just last position. 即代表是基于运行位置启动，新设置的位点并没有生效。 (此时需要检查下位点删除是否成功 或者 canal是否被多个pipeline引用，导致位点删除后，被另一个pipeline重新写入，导致新设置的位点没有生效.)</li>
+<li><strong><span style="color: red;">otter中使用canal，不允许pipeline共享一个canal.  otter中配置的canal即为一个instance，而otter就是为其一个client，目前canal不支持一个instance多个client的模式，会导致数据丢失，慎重. </span></strong></li>
+</ul>
+<p> </p>
 </div>
