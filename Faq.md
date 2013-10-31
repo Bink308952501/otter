@@ -77,5 +77,36 @@
 <li>如果日志中出现prepare to find start position just last position. 即代表是基于运行位置启动，新设置的位点并没有生效。 (此时需要检查下位点删除是否成功 或者 canal是否被多个pipeline引用，导致位点删除后，被另一个pipeline重新写入，导致新设置的位点没有生效.)</li>
 <li><strong><span style="color: red;">otter中使用canal，不允许pipeline共享一个canal.  otter中配置的canal即为一个instance，而otter就是为其一个client，目前canal不支持一个instance多个client的模式，会导致数据丢失，慎重. </span></strong></li>
 </ul>
+<h3>8.  日志列表中出现POSITIONTIMOUT后，数据进行重复同步？</h3>
 <p> </p>
+<p>答：</p>
+<p>首先需要理解下Position超时监控，该监控主要是监控当前同步进度中的位点的最后更新时间和当前时间的差值，简单点说就是看你同步进度的位点多少时间没有更新了，超过阀值后触发该报警规则. </p>
+<p>还有一点需要说明，同步进度中的位点只会记录一个事务的BEGIN/COMMIT位置，保证事务处理的完整性，不会记录事务中的中间位置. </p>
+<p>几种情况下会出现同步进度位点长时间无更新：</p>
+<ol>
+<li>源库出现大事务，比如进行load data/ delete * from xxx，同时操作几百万/千万的数据，同步该事务数据时，位点信息一直不会被更新，比如默认超过10分钟后，就会触发Position超时监控，此时就是一个误判，触发自动恢复，又进入重新同步，然后进入死循环。</li>
+<li>otter系统未知bug，导致系统的调度算法出现死锁，无法正常的同步数据，导致同步进度无法更新，触发该Position超时监控。此时：自动恢复的一次停用+启用同步任务，就可以恢复正常. <br>ps.  该Position超时监控，可以说是主要做为一种otter的系统保险机制，可以平衡一下，如果误判的影响&gt;系统bug触发的概率，可以考虑关闭Position超时监控，一般超时监控也会发出报警. </li>
+</ol>
+<p> </p>
+<h3>9.  日志列表中出现miss data with keys异常，同步出现挂起后又自动恢复？</h3>
+<p>异常信息：</p>
+<p> </p>
+<pre class="java" name="code">pid:2 nid:2 exception:setl:load miss data with keys:[MemoryPipeKey[identity=Identity[channelId=1,pipelineId=2,processId=4991953],time=1383190001987,dataType=DB_BATCH]]</pre>
+</div>
+<div class="iteye-blog-content-contain">答：</div>
+<div class="iteye-blog-content-contain">   要理解该异常，需要先了解一下[[otter调度模型]]，里面SEDA中多个stage之间通过pipe进行数据交互，比如T模块完成后会将数据存到pipe中，然后通知SEDA中心，中心会通知L模块起来工作，L模块就会根据T传给中心的pipeKey去提取数据，而该异常就是当L模块根据pipeKey去提取数据时，发现数据没了。 主要原因：pipe在设计时，如果是单机传输时，会使用softReference来存储，所以当jvm内存不足时就会被GC掉，所以就会出现无数据的情况.   </div>
+<div class="iteye-blog-content-contain">  ps. 如果miss data with keys异常非常多的时候，你就得考虑是否当前node已经超负载运行，内存不够，需要将上面的部分同步任务迁移出去。如果是偶尔的异常，那可以忽略，该异常会有自动恢复RESTART同步任务的处理。</div>
+<div class="iteye-blog-content-contain">
+<h3>10.  日志列表中出现manager异常？</h3>
+<p>异常信息：</p>
+<pre class="java" name="code">pid:2 nid:null exception:channel:can't restart by no select live node</pre>
+<p>该异常代表pipelineId = 2，select模块的node没有可用的节点. </p>
+<p> </p>
+<p>异常信息：</p>
+<pre class="java" name="code">pid:-1 nid:null exception:cid:2 restart recovery successful for rid:-1</pre>
+<p>该异常代表channelId = 2，成功发起了一次restart同步任务的操作. </p>
+<p> </p>
+<p>异常信息：</p>
+<pre class="java" name="code">pid:-1 nid:null exception:nid:2 is dead and restart cids:[1,2]</pre>
+<p>该异常代表node id = 2，因为该node挂了，触发了channelId = 1 / 2的两个同步任务发起restart同步任务的操作.  (一种failover的机制)</p>
 </div>
