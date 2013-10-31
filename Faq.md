@@ -77,8 +77,8 @@
 <li>如果日志中出现prepare to find start position just last position. 即代表是基于运行位置启动，新设置的位点并没有生效。 (此时需要检查下位点删除是否成功 或者 canal是否被多个pipeline引用，导致位点删除后，被另一个pipeline重新写入，导致新设置的位点没有生效.)</li>
 <li><strong><span style="color: red;">otter中使用canal，不允许pipeline共享一个canal.  otter中配置的canal即为一个instance，而otter就是为其一个client，目前canal不支持一个instance多个client的模式，会导致数据丢失，慎重. </span></strong></li>
 </ul>
-<h3>8.  日志列表中出现POSITIONTIMOUT后，数据进行重复同步？<br><img height="190" alt="" src="http://dl2.iteye.com/upload/attachment/0090/7324/a972d43f-700c-3a44-95e0-191bc9090645.jpg" width="741"><br> </h3>
-<p> </p>
+<h3>8.  日志列表中出现POSITIONTIMOUT后，数据进行重复同步？</h3>
+<img height="190" alt="" src="http://dl2.iteye.com/upload/attachment/0090/7324/a972d43f-700c-3a44-95e0-191bc9090645.jpg" width="741"><br> 
 <p>答：</p>
 <p>首先需要理解下Position超时监控，该监控主要是监控当前同步进度中的位点的最后更新时间和当前时间的差值，简单点说就是看你同步进度的位点多少时间没有更新了，超过阀值后触发该报警规则. </p>
 <p>还有一点需要说明，同步进度中的位点只会记录一个事务的BEGIN/COMMIT位置，保证事务处理的完整性，不会记录事务中的中间位置. </p>
