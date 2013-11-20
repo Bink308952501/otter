@@ -127,7 +127,7 @@ Otter QuickStart 如何配置一个任务
    )  ENGINE=InnoDB DEFAULT CHARSET=utf8;</pre>
 <p style="font-size: 14px;"> </p>
 <p style="font-size: 14px;">    全量同步操作示例： </p>
-<pre name="code" class="java">insert into retl.retl_buffer(ID,TABLE_ID, FULL_NAME,TYPE,PK_DATA,GMT_CREATE,GMT_MODIFIED) (select  null,０,'$schema.table$','I',id,now(),now() from $schema.table$);   </pre>
+<pre name="code" class="java">insert into retl.retl_buffer(ID,TABLE_ID, FULL_NAME,TYPE,PK_DATA,GMT_CREATE,GMT_MODIFIED) (select null,0,'$schema.table$','I',id,now(),now() from $schema.table$); </pre>
 <p style="font-size: 14px;"> </p>
 <h1>具体参数详解</h1>
 <h2>channel参数</h2>
