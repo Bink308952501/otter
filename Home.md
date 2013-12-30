@@ -56,6 +56,7 @@ otter之前开源的一个子项目，开源链接地址：<a href="http://githu
 
 1. 代码
 提交pull request : <a href="https://help.github.com/articles/using-pull-requests">https://help.github.com/articles/using-pull-requests</a>
+<br/>
 2. 捐助
 canal和otter目前开源版本的开发和技术支持都是业余时间支持，如果产品用着觉的不错，又愿意提供捐赠，请点击：<a href="http://me.alipay.com/canal">http://me.alipay.com/canal</a>
 
