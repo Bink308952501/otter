@@ -47,10 +47,17 @@ otter之前开源的一个子项目，开源链接地址：<a href="http://githu
 <p> </p>
 
 <h1>版本相关: </h1>
-<p>1. 建议版本：4.2.5  (otter开源版本从内部演变而来，所以初始版本直接从4.x开始) </p>
+<p>1. 建议版本：4.2.8  (otter开源版本从内部演变而来，所以初始版本直接从4.x开始) </p>
 <p>2. 下载发布包：<a href="https://github.com/alibaba/otter/releases">download</href> </p>
 <p>3. maven依赖 ： 暂无 </p>
 <p>4. 详细的issues列表可查看：<a href="http://alibaba.github.io/otter/release.html">ReleaseNotes</a></p>
+
+<h1>如何参与：</h1>
+
+1. 代码
+提交pull request : <a href="https://help.github.com/articles/using-pull-requests">https://help.github.com/articles/using-pull-requests</a>
+2. 捐助
+canal和otter目前开源版本的开发和技术支持都是业余时间支持，如果产品用着觉的不错，又愿意提供捐赠，请点击：<a href="http://me.alipay.com/canal">http://me.alipay.com/canal</a>
 
 <p> </p>
 <h1>问题反馈</h1>
