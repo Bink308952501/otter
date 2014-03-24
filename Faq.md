@@ -113,5 +113,9 @@
 <p>&nbsp;</p>
 <h3>11. &nbsp;otter针对跨机房同步时如何部署？</h3>
 <p><img src="http://dl2.iteye.com/upload/attachment/0095/2742/660525fe-5147-3c0c-bdc4-8379c626542d.jpg" alt="" width="751" height="480" /></p>
-<p>针对zookeeper observer介绍：<a href="http://zookeeper.apache.org/doc/trunk/zookeeperObservers.html">http://zookeeper.apache.org/doc/trunk/zookeeperObservers.html</a><br />&nbsp;</p>
-</div>
+<p>几点说明：</p>
+<ol>
+<li><span style="font-size: 12px; line-height: 1.5;">针对zookeeper observer介绍：</span><a style="font-size: 12px; line-height: 1.5;" href="http://zookeeper.apache.org/doc/trunk/zookeeperObservers.html">http://zookeeper.apache.org/doc/trunk/zookeeperObservers.html</a></li>
+<li>以上的配置主要针对机房容灾 (即允许单个机房挂了，而不影响系统可用性)，最简配置如下：<br />杭州： manager(1台) + &nbsp;zookeeper(1台 standalone模式) &nbsp;+ &nbsp;node(1..n台)<br />美国： node(1..n台). &nbsp;&nbsp;</li>
+<li>zookeeper的部署建议为奇数，主要是paxos算法决定了，2n偶数台的HA效果和2n-1台的效果一样，observer无这样的限制，可为偶数台.&nbsp;</li>
+</ol></div>
