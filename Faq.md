@@ -20,7 +20,7 @@
 <li>otter目前允许自定义同步逻辑，解决各类需求. &nbsp;<br />a. &nbsp;ETL转化. &nbsp;比如Slave上目标表的表名，字段名，字段类型不同，字段个数不同等.&nbsp;<br />b. &nbsp;异构数据库. &nbsp;比如Slave可以是oracle或者其他类型的存储,nosql等.&nbsp;<br />c. &nbsp;M-M部署，解决数据一致性问题<br />d. &nbsp;基于manager部署，方便监控同步状态和管理同步任务.&nbsp;&nbsp;</li>
 </ol>
 <h3>2. &nbsp;canal目前支持的数据库版本？</h3>
-<p style="font-size: 14px;">答： 支持mysql系列的5.1 ~ 5.6版本，目前maridb经测试暂不支持. &nbsp; (全面支持ROW/STATEMENT/MIXED几种binlog格式的解析)</p>
+<p style="font-size: 14px;">答： 支持mysql系列的5.1 ~ 5.6版本，mariadb 5/10版本. &nbsp; (全面支持ROW/STATEMENT/MIXED几种binlog格式的解析)</p>
 <p style="font-size: 14px;">&nbsp;</p>
 <h3>3. &nbsp;otter目前支持的数据库情况？</h3>
 <p style="font-size: 14px;">答：这里总结了一下</p>
