@@ -56,10 +56,12 @@ otter之前开源的一个子项目，开源链接地址：<a href="http://githu
 
 1. 代码
 提交pull request : <a href="https://help.github.com/articles/using-pull-requests">https://help.github.com/articles/using-pull-requests</a>
+
 2. 捐助
 canal和otter目前开源版本的开发和技术支持都是业余时间支持，如果产品用着觉的不错，又愿意提供捐赠支持QQ开源群日常费用，请扫码: 
 ![支持otter开源](http://dl2.iteye.com/upload/attachment/0115/1031/794d18b1-24bb-3366-838d-bb32014ab611.png)
 
+--------
 <p> </p>
 <h1>问题反馈</h1>
 <h3>注意：canal&otter QQ讨论群已经建立，群号：161559791 ，欢迎加入进行技术讨论。</h3>
