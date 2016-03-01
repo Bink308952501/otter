@@ -78,6 +78,7 @@ Otter QuickStart 如何配置一个任务
 <li>配置一个channel <br><img height="305" src="http://dl2.iteye.com/upload/attachment/0089/3555/fcf1872f-2e1c-370a-aae5-b08bac7d557a.png" width="431" alt=""><br> </li>
 <li>配置两个pipeline<br><img height="132" src="http://dl2.iteye.com/upload/attachment/0089/3557/07866a7c-ba20-3989-aa4b-b0d8a76e4b44.png" width="704" alt="">
 </li>
+* 注意：除了需要定义一个主站点外，需要在高级设置中将一个pipeline的“支持DDL”设置为false，另一个设置为true
 <li>每个pipeline各自配置canal，定义映射关系 </li>
 </ol>
 <h3>d.  级联同步</h3>
