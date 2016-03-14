@@ -20,7 +20,7 @@
 <p>&nbsp;&nbsp;&nbsp;   a. 数据库版本升级</p>
 <p>&nbsp;&nbsp;&nbsp;   b. 数据表迁移</p>
 <p>&nbsp;&nbsp;&nbsp;   c. 异步二级索引</p>
-<p>3.  异地机房同步 (比如阿里巴巴国际站就是杭州和美国机房的数据库同不，RTT &gt; 200ms，<strong>亮点</strong>)</p>
+<p>3.  异地机房同步 (比如阿里巴巴国际站就是杭州和美国机房的数据库同步，RTT &gt; 200ms，<strong>亮点</strong>)</p>
 <p>&nbsp;&nbsp;&nbsp;   a. 机房容灾</p>
 <p>4.  双向同步</p>
 <p>&nbsp;&nbsp;&nbsp;    a.  避免回环算法  (通用的解决方案，支持大部分关系型数据库)</p>
